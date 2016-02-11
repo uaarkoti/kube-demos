@@ -2,7 +2,7 @@ apiVersion: v1
 kind: Pod
 metadata:
   namespace: demos
-  name: pods-demo-pod
+  name: pods-demo
   labels:
     demo: pods
 spec:

@@ -33,6 +33,6 @@ run "gcloud compute ssh --zone=us-central1-b $SSH_NODE --command '\\
     '"
 
 tmux new -d -s my-session \
-    "$(dirname ${BASH_SOURCE})/_scale_1.sh" \; \
-    split-window -h -d "sleep 15; $(dirname $BASH_SOURCE)/_scale_2.sh" \; \
+    "$(dirname ${BASH_SOURCE})/split1_lhs.sh" \; \
+    split-window -h -d "sleep 10; $(dirname $BASH_SOURCE)/split1_rhs.sh" \; \
     attach \;

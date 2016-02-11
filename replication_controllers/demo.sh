@@ -40,7 +40,7 @@ run "gcloud compute ssh --zone=us-central1-b $NODE --command '\\
     '"
 while true; do
     run "kubectl --namespace=demos get node $NODE"
-    status=$(kubectl --namespace=demos get node $NODE | tail -1 | awk '{print $3}')
+    status=$(kubectl --namespace=demos get node $NODE | tail -1 | awk '{print $2}')
     if [ "$status" == "NotReady" ]; then
         break
     fi

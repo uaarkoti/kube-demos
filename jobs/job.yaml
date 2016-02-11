@@ -1,7 +1,7 @@
 apiVersion: extensions/v1beta1
 kind: Job
 metadata:
-  name: sleeper-job
+  name: jobs-demo
   namespace: demos
 spec:
   selector:

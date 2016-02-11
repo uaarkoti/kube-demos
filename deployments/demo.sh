@@ -10,7 +10,10 @@ desc "Deploy v1 of our app"
 run "cat $(relative deployment.yaml)"
 run "kubectl --namespace=demos create -f $(relative deployment.yaml) --validate=false"
 
+desc "Check it"
+run "kubectl --namespace=demos describe deployment deployment-demo"
+
 tmux new -d -s my-session \
     "$(dirname ${BASH_SOURCE})/split1_lhs.sh" \; \
-    split-window -h -d "sleep 15; $(dirname $BASH_SOURCE)/split1_rhs.sh" \; \
+    split-window -h -d "sleep 10; $(dirname $BASH_SOURCE)/split1_rhs.sh" \; \
     attach \;

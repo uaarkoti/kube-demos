@@ -13,10 +13,10 @@ desc "Hey look, a pod!"
 run "kubectl --namespace=demos get pods"
 
 desc "Get the pod's IP"
-run "kubectl --namespace=demos get pod pods-demo-pod -o yaml | grep podIP"
+run "kubectl --namespace=demos get pod pods-demo -o yaml | grep podIP"
 
 trap "" SIGINT
-IP=$(kubectl --namespace=demos get pod pods-demo-pod -o yaml \
+IP=$(kubectl --namespace=demos get pod pods-demo -o yaml \
         | grep podIP \
         | cut -f2 -d:)
 desc "SSH into my cluster and access the pod"

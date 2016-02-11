@@ -2,7 +2,7 @@ apiVersion: v1
 kind: Pod
 metadata:
   namespace: demos
-  name: graceful-demo-pod
+  name: graceful-demo
   labels:
     demo: graceful-termination
 spec:

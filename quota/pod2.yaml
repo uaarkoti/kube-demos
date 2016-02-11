@@ -2,7 +2,7 @@ apiVersion: v1
 kind: Pod
 metadata:
   namespace: demos
-  name: quota-demo-unspecified-pod
+  name: quota-demo-unspecified
 spec:
   containers:
   - name: hostname

@@ -2,7 +2,7 @@ apiVersion: extensions/v1beta1
 kind: DaemonSet
 metadata:
   namespace: demos
-  name: daemons-demo-daemon
+  name: daemons-demo
 spec:
   template:
     metadata:

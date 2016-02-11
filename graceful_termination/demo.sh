@@ -10,11 +10,11 @@ desc "Hey look, a pod!"
 run "kubectl --namespace=demos get pods"
 
 desc "Get the pod's logs"
-run "kubectl --namespace=demos logs graceful-demo-pod --follow"
+run "kubectl --namespace=demos logs graceful-demo --follow"
 
 desc "Delete the pod"
-run "kubectl --namespace=demos delete pod graceful-demo-pod"
-run "kubectl --namespace=demos get pods graceful-demo-pod"
+run "kubectl --namespace=demos delete pod graceful-demo"
+run "kubectl --namespace=demos get pods graceful-demo"
 
 desc "Get the pod's logs"
-run "kubectl --namespace=demos logs graceful-demo-pod --follow"
+run "kubectl --namespace=demos logs graceful-demo --follow"

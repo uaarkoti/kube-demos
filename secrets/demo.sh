@@ -11,10 +11,10 @@ run "cat $(relative pod.yaml)"
 run "kubectl --namespace=demos create -f $(relative pod.yaml)"
 
 while true; do
-    run "kubectl --namespace=demos get pod secrets-demo-pod"
-    status=$(kubectl --namespace=demos get pod secrets-demo-pod | tail -1 | awk '{print $3}')
+    run "kubectl --namespace=demos get pod secrets-demo"
+    status=$(kubectl --namespace=demos get pod secrets-demo | tail -1 | awk '{print $3}')
     if [ "$status" == "Running" ]; then
         break
     fi
 done
-run "kubectl --namespace=demos exec --tty -i secrets-demo-pod sh"
+run "kubectl --namespace=demos exec --tty -i secrets-demo sh"
