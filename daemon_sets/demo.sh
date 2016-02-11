@@ -16,7 +16,7 @@ run "kubectl --namespace=demos create -f $(relative svc.yaml)"
 
 desc "Run our daemon"
 run "cat $(relative daemon.yaml)"
-run "kubectl --namespace=demos create -f $(relative daemon.yaml)"
+run "kubectl --namespace=demos create -f $(relative daemon.yaml) --validate=false"
 run "kubectl --namespace=demos describe ds daemons-demo-daemon"
 
 tmux new -d -s my-session \
