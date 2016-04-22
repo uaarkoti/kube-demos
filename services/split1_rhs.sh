@@ -2,10 +2,10 @@
 
 . $(dirname ${BASH_SOURCE})/../util.sh
 
-desc "Resize the RC and watch the service backends change"
-run "kubectl --namespace=demos scale rc hostnames --replicas=1"
-run "kubectl --namespace=demos scale rc hostnames --replicas=2"
-run "kubectl --namespace=demos scale rc hostnames --replicas=5"
+desc "Resize the Deployment and watch the service backends change"
+run "kubectl --namespace=demos scale deployment hostnames --replicas=1"
+run "kubectl --namespace=demos scale deployment hostnames --replicas=2"
+run "kubectl --namespace=demos scale deployment hostnames --replicas=5"
 
 desc "Fire up a cloud load-balancer"
 run "kubectl --namespace=demos get svc hostnames -o yaml \\
