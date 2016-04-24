@@ -2,6 +2,10 @@
 Kubernetes demos
 
 To run these demos you need 'pv' and 'tmux' installed.
+(NOTE: On mac, use brew to install pv, tmux and coreutils)
+  * brew install pv
+  * brew install tmux
+  * brew install coreutil
 
 To make best use of these demos:
 
